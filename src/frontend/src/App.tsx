@@ -505,15 +505,16 @@ export default function App() {
             {/* Right — transformation collage */}
             <div className="relative animate-slideDown">
               <div
-                className="rounded-2xl overflow-hidden shadow-hero bg-green-50"
+                className="rounded-2xl overflow-hidden shadow-hero bg-green-50 border-4 border-green-200"
                 data-ocid="hero.canvas_target"
               >
                 <img
-                  src="/assets/generated/yoga-transformation-collage.dim_600x400.jpg"
+                  src="/assets/yoga_dp-019d524f-f50b-77e9-bfb3-b47b6bb3ff55.png"
                   alt="Real student yoga transformations — before and after"
                   className="w-full h-auto object-cover"
                   loading="eager"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-900/30 to-transparent pointer-events-none rounded-2xl" />
               </div>
               {/* Real Results badge */}
               <div className="absolute top-4 right-4 bg-brand-green text-white font-poppins font-bold text-xs px-3 py-1.5 rounded-full shadow-sm">
@@ -1023,6 +1024,113 @@ export default function App() {
         </div>
       </section>
 
+      {/* ── SECTION 7B: DAILY CLASS SCHEDULE ─────────────────────────────── */}
+      <section id="schedule" className="section-padding bg-white">
+        <div className="container-max">
+          <div className="text-center mb-10">
+            <h2 className="font-poppins font-extrabold text-3xl md:text-4xl text-brand-dark mb-3">
+              Daily Class Schedule
+            </h2>
+            <p className="text-brand-muted text-lg">
+              Choose the timing that fits your lifestyle. Multiple batches
+              available.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            {/* Day label */}
+            <div className="text-center mb-6">
+              <span className="inline-block bg-brand-green text-white font-poppins font-bold px-5 py-2 rounded-full text-sm">
+                Monday to Friday — Daily Live Classes
+              </span>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {/* Morning Batches */}
+              <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 shadow-xs">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-2xl">🌅</span>
+                  <h3 className="font-poppins font-extrabold text-xl text-amber-800">
+                    Morning Batches
+                  </h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white rounded-xl p-4 border border-amber-100 shadow-xs">
+                    <div className="font-poppins font-black text-brand-green text-lg">
+                      6:00 AM – 7:00 AM
+                    </div>
+                    <div className="font-semibold text-brand-dark mt-0.5">
+                      Morning Power Yoga
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-xl p-4 border border-amber-100 shadow-xs">
+                    <div className="font-poppins font-black text-brand-green text-lg">
+                      10:00 AM – 11:00 AM
+                    </div>
+                    <div className="font-semibold text-brand-dark mt-0.5">
+                      Mid-Morning Flow
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Evening Batches */}
+              <div className="bg-indigo-50 border border-indigo-200 rounded-2xl p-6 shadow-xs">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-2xl">🌙</span>
+                  <h3 className="font-poppins font-extrabold text-xl text-indigo-800">
+                    Evening Batches
+                  </h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white rounded-xl p-4 border border-indigo-100 shadow-xs">
+                    <div className="font-poppins font-black text-brand-green text-lg">
+                      6:00 PM – 7:00 PM
+                    </div>
+                    <div className="font-semibold text-brand-dark mt-0.5">
+                      Evening Flexibility &amp; Strength
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-xl p-4 border border-indigo-100 shadow-xs">
+                    <div className="font-poppins font-black text-brand-green text-lg">
+                      9:00 PM – 9:30 PM
+                    </div>
+                    <div className="font-semibold text-brand-dark mt-0.5">
+                      Night Meditation &amp; Pranayama
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Join note */}
+            <div className="bg-brand-mint border border-green-200 rounded-2xl p-5 text-center shadow-xs">
+              <p className="text-brand-dark font-semibold">
+                🌐 All classes via{" "}
+                <span className="text-brand-green font-bold">
+                  Google Meet / Zoom
+                </span>{" "}
+                — Join from anywhere in the world
+              </p>
+              <div className="inline-flex items-center gap-2 mt-3 bg-brand-green text-white text-sm font-poppins font-bold px-4 py-1.5 rounded-full">
+                <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                Live Right Now
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <button
+              type="button"
+              onClick={openModal}
+              className="bg-brand-green text-white font-poppins font-extrabold py-4 px-10 rounded-xl text-lg shadow-green-glow hover:opacity-90 transition-opacity"
+              data-ocid="schedule.primary_button"
+            >
+              Book Your Batch Now
+            </button>
+          </div>
+        </div>
+      </section>
       {/* ── SECTION 8: INSTRUCTOR ─────────────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="container-max">

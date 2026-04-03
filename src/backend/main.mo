@@ -2,10 +2,10 @@ import Map "mo:core/Map";
 import Nat "mo:core/Nat";
 import Time "mo:core/Time";
 import Text "mo:core/Text";
-import Migration "migration";
+
 import Runtime "mo:core/Runtime";
 
-(with migration = Migration.run)
+
 actor {
   type Enrollment = {
     id : Nat;
