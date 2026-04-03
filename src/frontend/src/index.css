@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Primary green: #16A34A → oklch(0.59 0.18 150) */
+    --brand-green: 0.59 0.18 150;
+    /* Dark green footer: #0B3B24 → oklch(0.28 0.09 153) */
+    --brand-green-dark: 0.28 0.09 153;
+    /* Light mint: #EAF6EE → oklch(0.96 0.04 150) */
+    --brand-mint: 0.96 0.04 150;
+    /* Near black: #111827 → oklch(0.18 0.02 253) */
+    --brand-dark: 0.18 0.02 253;
+    /* Muted: #6B7280 → oklch(0.55 0.02 264) */
+    --brand-muted: 0.55 0.02 264;
+    /* Star yellow: #F5C542 → oklch(0.84 0.16 90) */
+    --brand-star: 0.84 0.16 90;
+    /* Orange accent badge: #EA580C → oklch(0.60 0.20 42) */
+    --brand-orange: 0.6 0.2 42;
+    /* Red urgency: #DC2626 → oklch(0.53 0.23 27) */
+    --urgency-red: 0.53 0.23 27;
+
+    --background: 1 0 0;
+    --foreground: 0.18 0.02 253;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.02 253;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 253;
+    --primary: 0.59 0.18 150;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.96 0.04 150;
+    --secondary-foreground: 0.18 0.02 253;
+    --muted: 0.96 0.02 150;
+    --muted-foreground: 0.55 0.02 264;
+    --accent: 0.96 0.04 150;
+    --accent-foreground: 0.59 0.18 150;
+    --destructive: 0.53 0.23 27;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.92 0.02 150;
+    --input: 0.92 0.02 150;
+    --ring: 0.59 0.18 150;
+    --chart-1: 0.59 0.18 150;
+    --chart-2: 0.84 0.16 90;
+    --chart-3: 0.53 0.23 27;
+    --chart-4: 0.6 0.2 42;
+    --chart-5: 0.55 0.02 264;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.59 0.18 150;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.96 0.04 150;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.922 0 0;
+    --sidebar-ring: 0.708 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", "Inter", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-poppins {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .text-brand-green {
+    color: oklch(var(--brand-green));
+  }
+
+  .bg-brand-green {
+    background-color: oklch(var(--brand-green));
+  }
+
+  .bg-brand-mint {
+    background-color: oklch(var(--brand-mint));
+  }
+
+  .bg-brand-green-dark {
+    background-color: oklch(var(--brand-green-dark));
+  }
+
+  .text-brand-dark {
+    color: oklch(var(--brand-dark));
+  }
+
+  .text-brand-muted {
+    color: oklch(var(--brand-muted));
+  }
+
+  .text-urgency {
+    color: oklch(var(--urgency-red));
+  }
+
+  .text-brand-orange {
+    color: oklch(var(--brand-orange));
+  }
+
+  .border-brand-green {
+    border-color: oklch(var(--brand-green));
+  }
+
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+  }
+
+  .countdown-block {
+    background: oklch(0.22 0.09 153);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    min-width: 64px;
+    text-align: center;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideDown {
+    animation: slideDown 0.4s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .strikethrough {
+    text-decoration: line-through;
+  }
+
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  .container-max {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-max {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+}
